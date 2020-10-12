@@ -18,7 +18,7 @@ spring:
   datasource:                                           # 数据源的相关配置
     type: com.zaxxer.hikari.HikariDataSource          # 数据源类型：HikariCP
     driver-class-name: com.mysql.jdbc.Driver          # mysql驱动
-    url: jdbc:mysql://localhost:3306/ssm-demo?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    url: jdbc:mysql://localhost:3306/ssm-demo?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
     username: root
     password: root
     hikari:
@@ -36,12 +36,12 @@ spring:
       max-request-size: 512000  # 请求大小限制为500kb
   thymeleaf:
     cache: false #关闭Thymeleaf的缓存
-    prefix: classpath:/thymeleaf/ #模板路径
-    suffix: .html #模板后缀
-    servlet:
-      content-type: text/html #设置Content-type
-    encoding: utf-8 #编码方式
-    mode: HTML5 #校验HTML5格式
+#    prefix: classpath:/templates/ #模板路径
+#    suffix: .html #模板后缀
+#    servlet:
+#      content-type: text/html #设置Content-type
+#    encoding: utf-8 #编码方式
+#    mode: HTML #校验HTML格式
 
 ############################################################
 #

@@ -1,6 +1,9 @@
 package com.xxgc.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -8,12 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
  * Date:2020-10-10-13:02
  * Description:<描述>
  */
-@RestController
+@Controller
+@RequestMapping("hello")
 public class HelloController {
 
-    @GetMapping("/hello")
-    public Object hello() {
-        return "hello";
+    @GetMapping("/hello1")
+    public String hello(Model model) {
+        return "index";
     }
 
 }
